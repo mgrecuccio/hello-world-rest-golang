@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"google.golang.org/appengine" // Required external App Engine library
 	"os"
 )
 
@@ -16,7 +17,7 @@ func determineListnerAddress() (string, error) {
 }
 
 func hello(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "Hello, World")
+	fmt.Fprintln(w, "Hello, from Tenx Infotech")
 }
 
 func main() {
@@ -31,4 +32,6 @@ func main() {
 	if err := http.ListenAndServe(addr, nil); err != nil {
 		panic(err)
 	}
+	// Starts the server to receive requests
+	appengine.Main()
 }
