@@ -1,5 +1,5 @@
 # hello-world-rest-golang
-A simple hello world rest server written in golang for learning goland
+A simple hello world rest server written in golang to deploy on OpenShift
 
 # How to run?
 
